@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Great Code</title>
+  <link rel="shortcut icon" href="./img/logo.png">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <script data-ad-client="ca-pub-8285291763318622" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body id="page-top">
+  <!--Login system-->
+  </div>
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <img src="./img/logo.png" style="width:50px;" alt="">
+        </div>
+        <div class="sidebar-brand-text mx-3">GreatCode</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="home.html">
+          <i class="fas fa-home"></i>
+          <span>Home</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+          aria-controls="collapsePages">
+          <i class="fas fa-code-branch"></i>
+          <span>Theory</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header"></h6>
+
+            <a class="collapse-item" href="basics.html"> <i class="fab fa-codepen"></i> Basic Fundamentals</a>
+            <a class="collapse-item" href="algorithms.html"> <i class="fas fa-project-diagram"></i> Algorithms</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="problems.html">
+          <i class="fas fa-laptop-code"></i>
+          <span>Problems</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="competition.html">
+          <i class="fas fa-chess-queen"></i>
+          <span>Competitions</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="editor.html">
+          <i class="fas fa-terminal"></i>
+          <span>Online Editor</span></a>
+      </li>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
+                onclick="location.href = 'problems.html';">
+                Do you want to become programmer?
+              </button>
+            </div>
+          </form>
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                      aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                </form>
+              </div>
+            </li>
+            <img src="./img/cardimg.png" class="logo">
+            <button type="button" class="btn btn-primary btn-sm" onclick="signOut()"><i class="fas fa-sign-out-alt"></i>
+              Log Out</button>
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <!-- Content Row -->
+          <div class="row">
+
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Basic Fundamentals Of</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Programming</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-code"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Data Structures and</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Algorithms</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-code-branch"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Problems and</div>
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Competitions</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm mr-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-terminal"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Simple Onlne</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Editor</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fab fa-codepen"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">About</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area">
+                    <p>Behind every mouse click and touch-screen tap, there is a computer program that makes things
+                      happen. This course introduces the fundamental building blocks of programming and teaches you how
+                      to write fun and useful programs using the C++ language.</p>
+                    <p>Take your first step towards a career in software development with this introduction to C++one of
+                      the most in-demand programming languages and the foundation of a operating system. Designed for
+                      beginners, this Specialization will teach you core programming concepts and equip you to write
+                      programs to solve complex problems. In addition, you will gain the foundational skills a software
+                      engineer needs to solve real-world problems, from designing algorithms to testing and debugging
+                      your programs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Coding</h6>
+                  <div class="dropdown no-arrow">
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <img src="./img/cardimg.png" style="width:250px; ;" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+
+              <!-- Project Card Example -->
+              <div class="card shadow mb-4">
+                <img src="./img/d.jpg" alt="" style="width:250px;">
+              </div>
+              <!-- Color System -->
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-primary text-white shadow">
+                    <div class="card-body">
+                      You have here problems!
+                      <div class="text-white-50 small">Computers Problems=))</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-success text-white shadow">
+                    <div class="card-body">
+                      Success comes with work.
+                      <div class="text-white-50 small">Hard Work=))</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-info text-white shadow">
+                    <div class="card-body">
+                      You must be careful!
+                      <div class="text-white-50 small">Very Careful=))</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-warning text-white shadow">
+                    <div class="card-body">
+                      Concentration and Attention.
+                      <div class="text-white-50 small">So Hard=))</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-danger text-white shadow">
+                    <div class="card-body">
+                      Skill and skill.
+                      <div class="text-white-50 small">Not Impossible=))</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-secondary text-white shadow">
+                    <div class="card-body">
+                      Dedicated time
+                      <div class="text-white-50 small">A Lot=))</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-6 mb-4">
+
+              <!-- Illustrations -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Competitions and Quiz Questions</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                      src="img/undraw_posting_photo.svg" alt="">
+                  </div>
+                  <p>To become a very good software engineer your must practise a lot and also you must to participe at
+                    competitions.This site is what you search.</p>
+                  <a target="_blank" rel="nofollow" href="competition.html">Take a look &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Approach -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Online Editor</h6>
+                </div>
+                <div class="card-body">
+                  <p>
+                    The Great Code site provides you with an online editor. This way you can write your own code, test
+                    it and make changes. It is very important to write a correct and clean code.</p>
+                  <a target="_blank" rel="nofollow" href="editor.html">Write and test right now &rarr;</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="page-footer font-small special-color-dark pt-4">
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+          <!-- Social buttons -->
+          <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+              <a class="btn-floating btn-fb mx-1">
+                <i class="fab fa-facebook-f"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-tw mx-1">
+                <i class="fab fa-twitter"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-gplus mx-1">
+                <i class="fab fa-google-plus-g"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-li mx-1">
+                <i class="fab fa-linkedin-in"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-dribbble mx-1">
+                <i class="fab fa-dribbble"> </i>
+              </a>
+            </li>
+          </ul>
+          <!-- Social buttons -->
+
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Design:
+          <a href=""> Dinu Ion Irinel</a>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+      <!-- Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
+
+</body>
+
+</html>

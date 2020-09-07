@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Great Code</title>
+  <link rel="shortcut icon" href="./img/logo.png">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <img src="img/logo.png" style="width:50px;" alt="">
+        </div>
+        <div class="sidebar-brand-text mx-3">GreatCode</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="home.html">
+          <i class="fas fa-home"></i>
+          <span>Home</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+          aria-controls="collapsePages">
+          <i class="fas fa-code-branch"></i>
+          <span>Theory</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header"></h6>
+
+            <a class="collapse-item" href="./basics.html"> <i class="fab fa-codepen"></i> Basic Fundamentals</a>
+            <a class="collapse-item" href="./algorithms.html"> <i class="fas fa-project-diagram"></i> Algorithms</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="./problems.html">
+          <i class="fas fa-laptop-code"></i>
+          <span>Problems</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./competition.html">
+          <i class="fas fa-chess-queen"></i>
+          <span>Competitions</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./editor.html">
+          <i class="fas fa-terminal"></i>
+          <span>Online Editor</span></a>
+      </li>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
+                onclick="location.href = 'problems.html';">
+                Do you want to become programmer?
+              </button>
+            </div>
+          </form>
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+
+              </div>
+            </li>
+            <img src="./img/cardimg.png" class="logo">
+            <button type="button" class="btn btn-primary btn-sm" onclick="signOut()"><i class="fas fa-sign-out-alt"></i>
+              Log Out</button>
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+          <!-- Main Content -->
+          <div id="content">
+            <!--Main-->
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+              <!-- Page Heading -->
+              <h1 class="h3 mb-1 text-gray-800">Problems</h1>
+              <p class="mb-4"> Here you will have problems,computer problems.If you want to became a good programmer you
+                must to resolve a lot of problems.</p>
+              <p>GreatCode provides a large collection of challenges in the domain of computer science and mathematics.
+                The challenges typically involve writing a small program to figure out the solution to a clever
+                mathematical formula or equation, such as finding the sum of digits of all numbers preceding each number
+                in a series.GreatCode also provides the ability for users to submit applications and apply to jobs by
+                solving company-sponsored coding challenges.</p>
+              <h4>Problems do not have a specific order, they are meant to develop your thinking as a programmer.</h4>
+              <div class="card-body">
+                <div class="card">
+                  <div class="card-body">
+                    <li class="lesson-item1">
+                      <span class="fas fa-code" data-toggle="tooltip">
+                        <a href="./page_problems/hello_world.html">Hello World</a>
+                    </li><br>
+
+                    <li class="lesson-item">
+                      <span class="fas fa-code" data-toggle="tooltip">
+                        <a href="editor.html">Two Sum</a>
+                    </li><br>
+                    <li class="lesson-item">
+                      <span class="fas fa-code" data-toggle="tooltip">
+                        <a href="editor.html">String</a>
+                    </li><br>
+                    <li class="lesson-item">
+                      <span class="fas fa-code" data-toggle="tooltip">
+                        <a href="editor.html">Your name</a>
+                    </li><br>
+                    <li class="lesson-item">
+                      <span class="fas fa-code" data-toggle="tooltip">
+                        <a href="editor.html">Great</a>
+                    </li><br>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer Elements -->
+              <footer>
+                <div class="container">
+
+                  <!-- Social buttons -->
+                  <ul class="list-unstyled list-inline text-center">
+                    <li class="list-inline-item">
+                      <a class="btn-floating btn-fb mx-1">W
+                        <i class="fab fa-facebook-f"> </i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="btn-floating btn-tw mx-1">
+                        <i class="fab fa-twitter"> </i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="btn-floating btn-gplus mx-1">
+                        <i class="fab fa-google-plus-g"> </i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="btn-floating btn-li mx-1">
+                        <i class="fab fa-linkedin-in"> </i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="btn-floating btn-dribbble mx-1">
+                        <i class="fab fa-dribbble"> </i>
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- Social buttons -->
+
+                </div>
+                <!-- Footer Elements -->
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2020 Design:
+                  <a href=""> Dinu Ion Irinel</a>
+                </div>
+                <!-- Copyright -->
+
+              </footer>
+              <!-- Footer -->
+
+              <!-- Bootstrap core JavaScript-->
+              <script type="text/javascript" src="./js/script.js"></script>
+              <script src="vendor/jquery/jquery.min.js"></script>
+              <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+              <!-- Core plugin JavaScript-->
+              <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+              <!-- Custom scripts for all pages-->
+              <script src="js/sb-admin-2.min.js"></script>
+
+              <!-- Page level plugins -->
+              <script src="vendor/chart.js/Chart.min.js"></script>
+
+              <!-- Page level custom scripts -->
+              <script src="js/demo/chart-area-demo.js"></script>
+              <script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>
